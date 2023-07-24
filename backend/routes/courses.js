@@ -14,13 +14,13 @@ router.get('/', async (req, res) => {
 
 // POST a new course
 router.post('/', async (req, res) => {
-  const { name, topicID, priceRange } = req.body;
+  const { name, topicID, price } = req.body;
 
   try {
     const course = new Course({
       name,
       topicID,
-      priceRange,
+      price,
     });
 
     const newCourse = await course.save();

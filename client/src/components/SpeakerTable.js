@@ -12,9 +12,9 @@ const SpeakerTable = ({ speakers }) => {
         </thead>
         <tbody>
           {speakers.map((speaker) => (
-            <tr key={speaker.ID}>
-              <td>{speaker.ID}</td>
-              <td>{speaker.Name}</td>
+            <tr key={speaker._id}>
+              <td>{speaker._id}</td>
+              <td>{speaker.name}</td>
             </tr>
           ))}
         </tbody>
