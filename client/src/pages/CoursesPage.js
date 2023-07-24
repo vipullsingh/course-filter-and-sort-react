@@ -3,6 +3,7 @@ import CourseTable from '../components/CourseTable';
 import FilterPanel from '../components/FilterPanel';
 import SortPanel from '../components/SortPanel';
 import Pagination from '../components/Pagination';
+import './styles.css'
 
 const CoursesPage = () => {
   const [courses, setCourses] = useState([]);
