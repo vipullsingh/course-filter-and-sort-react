@@ -84,13 +84,14 @@ const CoursesPage = () => {
     setSortOrder(order);
     const sortedCourses = [...filteredCourses].sort((a, b) => {
       if (order === 'latest') {
-        return a.createdOn - b.createdOn;
+        return new Date(b.createdOn) - new Date(a.createdOn);
       } else {
-        return b.createdOn - a.createdOn;
+        return new Date(a.createdOn) - new Date(b.createdOn);
       }
     });
     setFilteredCourses(sortedCourses);
   };
+  
 
   // Handle pagination change
   const handlePageChange = (pageNumber) => {
